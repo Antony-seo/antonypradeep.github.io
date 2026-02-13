@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antony Pradeep | SEO Specialist & Digital Strategist</title>
+    <meta name="description" content="Official portfolio of Antony Pradeep, a specialist in Search Engine Optimization.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Courier+Prime&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary-red: #cc0000; --dark-bg: #1a1a1a; }
+        body { background-color: var(--dark-bg); color: #eeeeee; font-family: 'Montserrat', sans-serif; margin: 0; text-align: center; cursor: pointer; }
+        header { background: linear-gradient(135deg, #8B0000 0%, #1a1a1a 100%); padding: 60px 20px; border-bottom: 4px solid var(--primary-red); }
+        .tagline { color: #ff4d4d; font-weight: bold; margin-top: 10px; }
+        .content-section { max-width: 800px; margin: 40px auto; padding: 30px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; border: 1px solid #333; line-height: 1.8; text-align: left; }
+        .personal-note { font-size: 19px; color: #f9f9f9; white-space: pre-line; }
+        .love-icon { display: inline-block; cursor: pointer; font-size: 26px; color: var(--primary-red); vertical-align: middle; filter: drop-shadow(0 0 5px red); transition: 0.3s; }
+        .audit-card { background: #222; padding: 15px; border-radius: 8px; border-bottom: 3px solid var(--primary-red); text-align: center;}
+        .audit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin-top: 30px; }
+        .popup-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; justify-content: center; align-items: center; flex-direction: column; }
+        .popup-box { background: white; color: var(--primary-red); padding: 40px; border-radius: 20px; font-size: 2.5em; font-weight: bold; box-shadow: 0 0 30px var(--primary-red); text-align: center; }
+    </style>
+</head>
+<body ondblclick="playMusic()">
+    <header>
+        <h1>Antony Pradeep</h1>
+        <p class="tagline">SEO Specialist | Technical Audit Expert | Data Strategist</p>
+        <p style="font-size: 12px; color: #777;">(Double-click anywhere to run the Love Audit 🎵)</p>
+        <div class="audit-grid" style="max-width: 800px; margin: 30px auto 0;">
+            <div class="audit-card"><h3>Trust Score</h3><p>100%</p></div>
+            <div class="audit-card"><h3>Heart Ranking</h3><p>#1 Global</p></div>
+            <div class="audit-card"><h3>Bounce Rate</h3><p>0%</p></div>
+        </div>
+    </header>
+    <div class="content-section">
+        <div class="personal-note">
+            Paa, you don't know how much <span class="love-icon" onclick="openLove()">❤️</span> , life la yen una ivolo pudikumnu therila unoda elathaium na rasikuran un kovam un siripu elamy , 
+            
+            na una love panrathu ithu elamay thapu nu therium but atha na accept panikuran but ni matum than na nenacha elamy kuduthu iruka Freedom , Care , Love , Proud elam unala kedachi iruku . 
+            
+            You are my Universe . Thanks for Coming my life , enaku thonuthu enaku thonuthu na katura athay love ni katalanu but ok irukatum , una nanny athikama love pannikura itha na unta sonathu ila ivolo nala <span class="love-icon" onclick="openLove()">❤️</span>
+        </div>
+    </div>
+    <audio id="mySong" loop> <source src="song.mp3" type="audio/mpeg"> </audio>
+    <div id="popup" class="popup-overlay" onclick="closeLove()">
+        <div class="popup-box">I LOVE YOU! 💖</div>
+        <p style="color: white; margin-top: 20px;">Now playing your favorite tune...</p>
+    </div>
+    <script>
+        var music = document.getElementById("mySong");
+        function playMusic() { if (music.paused) { music.play(); } else { music.pause(); } }
+        function openLove() { document.getElementById('popup').style.display = 'flex'; music.play(); }
+        function closeLove() { document.getElementById('popup').style.display = 'none'; }
+    </script>
+</body>
+</html>
